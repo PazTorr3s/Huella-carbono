@@ -143,6 +143,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # settings.py
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-35aca.up.railway.app",
+    "https://huellacarbono.onrender.com",
+]
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
