@@ -28,7 +28,12 @@ SECRET_KEY = 'django-insecure-byt7l860&6vy$ec_ktf7#!%#9ztz@)c9&&6teln_yl9(wbxp6d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'huellacarbono.onrender.com',
+    'localhost',
+    '127.0.0.1',
+    'web-production-35aca.up.railway.app',
+]
 
 
 # Application definition
@@ -128,6 +133,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
@@ -137,6 +143,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # settings.py
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-35aca.up.railway.app",
+    "https://huellacarbono.onrender.com",
+]
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
